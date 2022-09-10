@@ -1,0 +1,38 @@
+#fibonacci series
+
+#function to print all the rest numbers of the series
+def fib(sum,j,n):
+    for i in range(0, n):
+        temp = 0
+    #j will contain the previous fib num printed i.e
+    #the previous no now to be added to the 
+        temp = sum
+        sum = sum + j # 1+1
+        print(sum, end = ',')
+        j = temp
+        
+        
+ #this function will print only the 3rd no 
+#In the fibonacci series
+def fibonacci(n):
+    i = 0
+    j = 1
+    temp = 0
+    sum = i + j
+    temp = sum
+    print(sum, end = ',')
+    fib(sum,temp,n)
+    
+        
+#main function will take care of printing 
+#the first 2 numbers of the fibonacci series
+print('Fibonacci Series')
+n = int(input('print first ____ numbers from the series: '))
+
+if n >0 and n<2:
+    print('0')
+elif n>1 and n<3:
+    print('0,1')
+else:
+    print('0,1', end =',')
+    fibonacci(n)
